@@ -15,7 +15,7 @@ for file in file_list:
         open_file = open(os.getcwd()+"/supplier-data/descriptions/"+file,"r")
         line_list = open_file.read().splitlines()
         current_request["name"] = line_list[0]
-        current_request["weight"] = Int(line_list[1][0:-4])
+        current_request["weight"] = int(line_list[1][0:-4])
         current_request["description"] = line_list[2]
         current_request["image_name"] = file[-4:0]+ ".jpeg"
         open_file.close()
