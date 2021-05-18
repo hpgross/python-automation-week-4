@@ -22,4 +22,5 @@ for file in file_list:
 
         new_post = requests.post(server_location,json=current_request)
         new_post.raise_for_status()
+        print(new_post.request.url)
         print(new_post.status_code)
