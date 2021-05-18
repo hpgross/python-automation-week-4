@@ -17,7 +17,7 @@ for file in file_list:
         current_request["name"] = line_list[0]
         current_request["weight"] = int(line_list[1][0:-4])
         current_request["description"] = line_list[2]
-        current_request["image_name"] = file[-4:0]+ ".jpeg"
+        current_request["image_name"] = file[0:-4]+ ".jpeg"
         open_file.close()
 
         new_post = requests.post(server_location,json=current_request)
