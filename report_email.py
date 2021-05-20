@@ -13,7 +13,8 @@ def main():
         if file[-4:] == ".txt":
             with open(datapath + file, "r") as doc:
                 lines = doc.readlines()
-                fruit_name, fruit_weight = lines
+                fruit_name = lines[0]
+                fruit_weight = lines[1]
                 content += "name: "+fruit_name+"<br/>"+"weight: "+fruit_weight+"<br/><br/>"
 
     """Generate the report based on the processed data"""
