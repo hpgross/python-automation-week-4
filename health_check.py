@@ -16,7 +16,7 @@ def send_error_email(error):
     subject = error_dict[error]
     body = "Please check your system and resolve the issue as soon as possible."
 
-    message = emails.generate_email(sender, receiver, subject, body)
+    message = emails.generate_email(sender, receiver, subject, body,None)
     emails.send_email(message)
 
 if psutil.cpu_percent(1) > 80:
