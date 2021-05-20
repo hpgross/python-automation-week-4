@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import os, datetime, reports
+import os, datetime, reports, emails
 
 current_date = datetime.datetime.now().strftime("%B %d, %Y")
 
